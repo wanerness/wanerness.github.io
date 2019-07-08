@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="1.React Navigation 的安装React Navigation 是 React Native 导航解决方案，通过以下命令进行安装 123yarn add react-navigation# or with npm# npm install --save react-navigation 2.stack navigationstack navigation 提供了路由的堆栈管理，记录导">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React Native 学习（一）">
+<meta property="og:url" content="http://yoursite.com/2018/06/11/React-Native-学习（一）/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.React Navigation 的安装React Navigation 是 React Native 导航解决方案，通过以下命令进行安装 123yarn add react-navigation# or with npm# npm install --save react-navigation 2.stack navigationstack navigation 提供了路由的堆栈管理，记录导">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-11T15:06:24.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React Native 学习（一）">
+<meta name="twitter:description" content="1.React Navigation 的安装React Navigation 是 React Native 导航解决方案，通过以下命令进行安装 123yarn add react-navigation# or with npm# npm install --save react-navigation 2.stack navigationstack navigation 提供了路由的堆栈管理，记录导">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/06/11/React-Native-学习（一）/">
+
+
+
+
+
+  <title>React Native 学习（一） | Hexo</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/11/React-Native-学习（一）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">React Native 学习（一）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-11T16:53:21+08:00">
+                2018-06-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="1-React-Navigation-的安装"><a href="#1-React-Navigation-的安装" class="headerlink" title="1.React Navigation 的安装"></a>1.React Navigation 的安装</h3><p>React Navigation 是 React Native 导航解决方案，通过以下命令进行安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yarn add react-navigation</span><br><span class="line"># or with npm</span><br><span class="line"># npm install --save react-navigation</span><br></pre></td></tr></table></figure>
+<h3 id="2-stack-navigation"><a href="#2-stack-navigation" class="headerlink" title="2.stack navigation"></a>2.stack navigation</h3><p>stack navigation 提供了路由的堆栈管理，记录导航历史</p>
+<h4 id="stack-navigator的创建"><a href="#stack-navigator的创建" class="headerlink" title="stack navigator的创建"></a>stack navigator的创建</h4><p>使用createStackNavigator创建一个stack navigator，createStackNavigator返回一个React 组件（包含路由配置对象和option对象）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">const RootStack = createStackNavigator(</span><br><span class="line">  &#123;</span><br><span class="line">    Home: &#123;</span><br><span class="line">      screen: HomeScreen	//react组件，必须属性</span><br><span class="line">    &#125;,</span><br><span class="line">    Detail: &#123;</span><br><span class="line">      screen: DetailScreen</span><br><span class="line">    &#125;,</span><br><span class="line">    </span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    initialRouteName:&apos;Home&apos;</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br><span class="line">export default class App extends React.Component &#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;RootStack /&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-navigation-prop"><a href="#3-navigation-prop" class="headerlink" title="3.navigation prop"></a>3.navigation prop</h3><p>在栈顶端的路由会自动注入一个navigation的属性，navigation有如下方法：</p>
+<p>####(1) navigate(路由名称，参数)<br>navigate用于跳转到目的路由组件，会先在栈内查找目标组件，如果没有，在栈顶新增，如果有，直接跳到目标组件，并删除目标组件之后的所有组件（路由对应的组件被注销）</p>
+<p>在页面中navigate本页面时，无变化（当前组件不注销）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.props.navigation.navigate(&apos;Detail&apos;)</span><br></pre></td></tr></table></figure>
+<p>####(2) push(路由名称，参数)<br>始终在栈顶新增一个路由组件（允许重复）</p>
+<p>####(3) goBack()<br>路由栈pop（删除当前组件，回到栈中的上一个组件）</p>
+<h3 id="4-setParams-参数对象"><a href="#4-setParams-参数对象" class="headerlink" title="(4) setParams(参数对象)"></a>(4) setParams(参数对象)</h3><p>设置组件自身param</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.props.navigation.setParams(&#123;name: &apos;123&apos;&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="4-navigate-传参"><a href="#4-navigate-传参" class="headerlink" title="4.navigate 传参"></a>4.navigate 传参</h3><p>传递</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//home 组件</span><br><span class="line"></span><br><span class="line">this.props.navigation.navigate(&apos;Home&apos;,&#123;</span><br><span class="line">	name:&apos;123&apos;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>获取</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//home 组件</span><br><span class="line"></span><br><span class="line">this.props.navigation.getParam(&apos;Home&apos;,&apos;默认值&apos;),</span><br><span class="line"></span><br><span class="line">//或者</span><br><span class="line">this.props.navigation.state.params</span><br></pre></td></tr></table></figure>
+<h3 id="5-navigationOptions"><a href="#5-navigationOptions" class="headerlink" title="5.navigationOptions"></a>5.navigationOptions</h3><p>createStackNavigator的第二个参数即为navigationOptions，是一个全局的配置对象</p>
+<p>每个组件中可以接受一个navigationOptions作为静态属性，其配置可以覆盖全局的navigationOptions</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">//全局配置对象</span><br><span class="line">onst RootStack = createStackNavigator(</span><br><span class="line">  &#123;</span><br><span class="line">    Home: &#123;</span><br><span class="line">      screen: HomeScreen//必须属性</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,//路由配置对象</span><br><span class="line">  </span><br><span class="line">  &#123;</span><br><span class="line">    initialRouteName:&apos;Home&apos;,</span><br><span class="line">    navigationOptions:&#123;</span><br><span class="line">      headerStyle: &#123;</span><br><span class="line">        backgroundColor: &apos;#f4511e&apos;,</span><br><span class="line">      &#125;,</span><br><span class="line">      headerTintColor: &apos;#fff&apos;,</span><br><span class="line">      headerTitleStyle: &#123;</span><br><span class="line">        fontWeight: &apos;bold&apos;,</span><br><span class="line">        fontSize: 20</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;//option对象</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//Home组件的配置对象</span><br><span class="line">class HomeScreen extends Component &#123;</span><br><span class="line">  static navigationOptions=&#123;</span><br><span class="line">    headerTitle:&lt;MyHeader/&gt;,</span><br><span class="line">    headerRight:(</span><br><span class="line">    &lt;Button</span><br><span class="line">      onPress=&#123;()=&gt;&#123;console.warn(&apos;pressed&apos;)&#125;&#125;</span><br><span class="line">      title=&apos;info&apos;</span><br><span class="line">      color=&apos;#fff&apos;</span><br><span class="line">    /&gt;)</span><br><span class="line">  &#125;//该配置对象优先级高于全局配置</span><br><span class="line">  </span><br><span class="line">  render()&#123;</span><br><span class="line">  	return()</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>组件内部的navigationOptions可以使对象或者返回配置对象的函数，如果势函数，接受以下参数：</p>
+<p> navigation - 页面的 导航属性 ，在页面中的路由为navigation.state</p>
+<p> screenProps - 从导航器组件上层传递的 props</p>
+<p> navigationOptions - 如果未提供新值，将使用的默认或上一个选项(全局配置)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">static navigationOptions = (&#123; navigation,screenProps,navigationOptions &#125;) =&gt; &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      title: navigation.getParam(&apos;otherParam&apos;, &apos;A Nested Details Screen&apos;),</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>注：在navigationOptions中，this不指向组件实例（HomeScreen）,所以不能用setState等方法</strong><br>解决方案：通过param传递处理函数或者使用redux等管理数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">class HomeScreen extends React.Component &#123;</span><br><span class="line">  static navigationOptions = (&#123; navigation &#125;) =&gt; &#123;</span><br><span class="line">    const params = navigation.state.params || &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    return &#123;</span><br><span class="line">      headerTitle: &lt;LogoTitle /&gt;,</span><br><span class="line">      headerRight: (</span><br><span class="line">        &lt;Button onPress=&#123;params.increaseCount&#125; title=&quot;+1&quot; color=&quot;#fff&quot; /&gt;</span><br><span class="line">      ),</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  componentWillMount() &#123;</span><br><span class="line">    this.props.navigation.setParams(&#123; increaseCount: this._increaseCount &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  state = &#123;</span><br><span class="line">    count: 0,</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  _increaseCount = () =&gt; &#123;</span><br><span class="line">    this.setState(&#123; count: this.state.count + 1 &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  /* later in the render function we display the count */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/11/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/29/gitignore的配置及忽略无效问题/" rel="prev" title="gitignore的配置及忽略无效问题">
+                gitignore的配置及忽略无效问题 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-React-Navigation-的安装"><span class="nav-number">1.</span> <span class="nav-text">1.React Navigation 的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-stack-navigation"><span class="nav-number">2.</span> <span class="nav-text">2.stack navigation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#stack-navigator的创建"><span class="nav-number">2.1.</span> <span class="nav-text">stack navigator的创建</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-navigation-prop"><span class="nav-number">3.</span> <span class="nav-text">3.navigation prop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-setParams-参数对象"><span class="nav-number">4.</span> <span class="nav-text">(4) setParams(参数对象)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-navigate-传参"><span class="nav-number">5.</span> <span class="nav-text">4.navigate 传参</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-navigationOptions"><span class="nav-number">6.</span> <span class="nav-text">5.navigationOptions</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
