@@ -6,10 +6,10 @@
 
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +20,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
 
 
@@ -40,7 +40,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -48,9 +48,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
@@ -68,13 +68,13 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml" />
 
 
 
@@ -117,7 +117,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/"/>
 
 
 
@@ -152,7 +152,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
+      <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Hexo</span>
         <span class="logo-line-after"><i></i></span>
@@ -182,7 +182,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -192,7 +192,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -231,11 +231,146 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/17/fork-远程库并更新/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/17/fork-远程库并更新/" itemprop="url">fork 远程库并更新</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-17T15:53:35+08:00">
+                2019-08-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="一-fork"><a href="#一-fork" class="headerlink" title="一 fork"></a>一 fork</h2><p>fork 远程库，就是将原始远程库拷贝一个副本到自己的远端库中，之后可以通过克隆到本地，对项目进行修改提交（提交到自己的远程库中），最后通过发送merge request请求并入到原始库中，可通过这种模式开发开源项目，或公司内协同工作</p>
+<h2 id="fork-库并同步"><a href="#fork-库并同步" class="headerlink" title="fork 库并同步"></a>fork 库并同步</h2><p>原始库：A</p>
+<p>fork库 ：B</p>
+<h3 id="1-gitlab-github上fork原始库"><a href="#1-gitlab-github上fork原始库" class="headerlink" title="1.gitlab/github上fork原始库"></a>1.gitlab/github上fork原始库</h3><p>点击进入原始库A的gitlab/github仓库，点击fork，fork到B库中</p>
+<h3 id="2-克隆B库到本地"><a href="#2-克隆B库到本地" class="headerlink" title="2.克隆B库到本地"></a>2.克隆B库到本地</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd b</span><br><span class="line"></span><br><span class="line">git clone b库地址</span><br></pre></td></tr></table></figure>
+<h3 id="3-添加B本地库的上游库（原始库）追踪"><a href="#3-添加B本地库的上游库（原始库）追踪" class="headerlink" title="3.添加B本地库的上游库（原始库）追踪"></a>3.添加B本地库的上游库（原始库）追踪</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add upstream A库地址</span><br></pre></td></tr></table></figure>
+<p>添加后可以用 git remote -v 查看<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> git remote -v</span><br><span class="line"></span><br><span class="line">origin	https://github.com/wanerness11/my-react-comp-npm.git (fetch)</span><br><span class="line">origin	https://github.com/wanerness11/my-react-comp-npm.git (push)</span><br><span class="line">upstream	https://github.com/wanerness/my-react-comp-npm.git (fetch)</span><br><span class="line">upstream	https://github.com/wanerness/my-react-comp-npm.git (push)</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-同步B库"><a href="#4-同步B库" class="headerlink" title="4 同步B库"></a>4 同步B库</h3><p>当A库发生更新后，使用如下方法同步B库</p>
+<h4 id="1-fetch更新"><a href="#1-fetch更新" class="headerlink" title="1.fetch更新"></a>1.fetch更新</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch upstream</span><br></pre></td></tr></table></figure>
+<p>fetch 后，A库的变化会拉取到本地<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* [new branch]      dev        -&gt; upstream/dev //A库新增了dev分支，拉去到本地的 upstream/dev下</span><br><span class="line">* [new branch]      master     -&gt; upstream/master //A库修改了maste分支，拉取到本地的 upstream/master下</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-更新B库本地分支"><a href="#2-更新B库本地分支" class="headerlink" title="2.更新B库本地分支"></a>2.更新B库本地分支</h4><h5 id="1）更新B本地已存在的分支："><a href="#1）更新B本地已存在的分支：" class="headerlink" title="1）更新B本地已存在的分支："></a>1）更新B本地已存在的分支：</h5><p>切换到代更新分支上（如 master）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line"></span><br><span class="line">git merge upstream/master</span><br></pre></td></tr></table></figure>
+<h5 id="2）同步B本地不存在的新分支："><a href="#2）同步B本地不存在的新分支：" class="headerlink" title="2）同步B本地不存在的新分支："></a>2）同步B本地不存在的新分支：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b 新增分支名 upstream/新增分支名</span><br></pre></td></tr></table></figure>
+<p>该操作拉取A库新增的分支到B库本地，</p>
+<h3 id="5-push-B库本地内容到B库远端"><a href="#5-push-B库本地内容到B库远端" class="headerlink" title="5 push B库本地内容到B库远端"></a>5 push B库本地内容到B库远端</h3><p>以上几部的操作都是在B库的本地，必须通过push才能更新B库的远程库，对于B库本地新增的分支，可用以下命令push到远端<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --set-upstream origin 分支名</span><br></pre></td></tr></table></figure></p>
+<h3 id="6-通过merge-request通知A库，申请将B库修改并入A库"><a href="#6-通过merge-request通知A库，申请将B库修改并入A库" class="headerlink" title="6 通过merge request通知A库，申请将B库修改并入A库"></a>6 通过merge request通知A库，申请将B库修改并入A库</h3><p>gitlab/github上发起merge request，选择好目标分支，发起请求即可</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/08/更换电脑，hexo迁移/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -355,7 +490,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -492,7 +627,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -620,7 +755,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -760,7 +895,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -841,12 +976,12 @@
 <p>可以看到对于受控的两组（mount，click）setState均为异步操作，<br>而不受控的timer，则为同步</p>
 <h3 id="step2"><a href="#step2" class="headerlink" title="step2"></a>step2</h3><p>进一步的，考虑在promise中的情况，改动如下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">componentDidMount()&#123;</span><br><span class="line">               </span><br><span class="line">        console.log(&apos;mount&apos;)</span><br><span class="line">        new Promise((res,rej)=&gt;&#123;</span><br><span class="line">            this.update()</span><br><span class="line">            res()</span><br><span class="line">        &#125;)</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p><img src="http://thyrsi.com/t6/372/1537258363x-1922733609.jpg" alt></p>
+<p><img src="http://thyrsi.com/t6/372/1537258363x-1922733609.jpg" alt=""></p>
 <p>仍然是异步的，即仍然受控</p>
 <h3 id="step3"><a href="#step3" class="headerlink" title="step3"></a>step3</h3><p>最后，我们将调用放在promise的then方法中</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">componentDidMount()&#123;</span><br><span class="line">               </span><br><span class="line">        console.log(&apos;mount&apos;)</span><br><span class="line">        new Promise((res,rej)=&gt;&#123;   </span><br><span class="line">            res()</span><br><span class="line">        &#125;).then(()=&gt;&#123;</span><br><span class="line">        	  this.update()</span><br><span class="line">        	&#125;</span><br><span class="line">        )</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <p>结果</p>
-<p><img src="http://thyrsi.com/t6/372/1537258776x-1566663863.jpg" alt></p>
+<p><img src="http://thyrsi.com/t6/372/1537258776x-1566663863.jpg" alt=""></p>
 <p>发现setState同步了，也就是说在then中的调用已经不受react控制</p>
 <h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>上例中，不受控的调用源来自于event loop中的任务，所以考虑事件循环中的调用可以使setState同步</p>
 <p>为确保万一，应该都用异步的方式来处理state，防止出现不必要的状态问题</p>
@@ -902,7 +1037,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -1024,7 +1159,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -1170,7 +1305,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -1327,7 +1462,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
