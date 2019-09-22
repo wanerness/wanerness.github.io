@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="一 箭头函数中的this对于ES5中普通函数来说，this会绑定到函数执行时的上下文，比如 123456789101112131415var o=&amp;#123; arr:[1,2,3] loop:this.arr.forEach(function(v)&amp;#123;	console.log(this.arr)  // undefined,这里this为window，浏览器里forEach中的函数执行时">
+<meta name="description" content="android 中文字会向偏移，（如按钮文字，加了删除线的文字，偏移效果明显，iphone中正常居中） 解决方案：将字体扩大一倍，然后用transform：scale(0.5)在缩小一倍123456789.raw-price &amp;#123;     font-size: 18px;  //目标size为9px， 这里放大一倍     transform: scale(.5); //在使用transf">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ES6 箭头函数">
-<meta property="og:url" content="http://yoursite.com/2019/06/17/ES6-箭头函数/index.html">
+<meta property="og:title" content="Android 文字上移">
+<meta property="og:url" content="http://yoursite.com/2019/09/22/Android-文字上移/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一 箭头函数中的this对于ES5中普通函数来说，this会绑定到函数执行时的上下文，比如 123456789101112131415var o=&amp;#123; arr:[1,2,3] loop:this.arr.forEach(function(v)&amp;#123;	console.log(this.arr)  // undefined,这里this为window，浏览器里forEach中的函数执行时">
+<meta property="og:description" content="android 中文字会向偏移，（如按钮文字，加了删除线的文字，偏移效果明显，iphone中正常居中） 解决方案：将字体扩大一倍，然后用transform：scale(0.5)在缩小一倍123456789.raw-price &amp;#123;     font-size: 18px;  //目标size为9px， 这里放大一倍     transform: scale(.5); //在使用transf">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-17T09:13:06.510Z">
+<meta property="og:updated_time" content="2019-09-22T06:23:41.529Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ES6 箭头函数">
-<meta name="twitter:description" content="一 箭头函数中的this对于ES5中普通函数来说，this会绑定到函数执行时的上下文，比如 123456789101112131415var o=&amp;#123; arr:[1,2,3] loop:this.arr.forEach(function(v)&amp;#123;	console.log(this.arr)  // undefined,这里this为window，浏览器里forEach中的函数执行时">
+<meta name="twitter:title" content="Android 文字上移">
+<meta name="twitter:description" content="android 中文字会向偏移，（如按钮文字，加了删除线的文字，偏移效果明显，iphone中正常居中） 解决方案：将字体扩大一倍，然后用transform：scale(0.5)在缩小一倍123456789.raw-price &amp;#123;     font-size: 18px;  //目标size为9px， 这里放大一倍     transform: scale(.5); //在使用transf">
 
 
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/06/17/ES6-箭头函数/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/09/22/Android-文字上移/"/>
 
 
 
 
 
-  <title>ES6 箭头函数 | Hexo</title>
+  <title>Android 文字上移 | Hexo</title>
   
 
 
@@ -234,7 +234,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/17/ES6-箭头函数/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/22/Android-文字上移/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -251,7 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ES6 箭头函数</h1>
+          <h1 class="post-title" itemprop="name headline">Android 文字上移</h1>
         
 
         <div class="post-meta">
@@ -263,8 +263,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-17T16:26:21+08:00">
-                2019-06-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-22T14:18:39+08:00">
+                2019-09-22
               </time>
             
 
@@ -301,15 +301,10 @@
       
 
       
-        <h3 id="一-箭头函数中的this"><a href="#一-箭头函数中的this" class="headerlink" title="一 箭头函数中的this"></a>一 箭头函数中的this</h3><p>对于ES5中普通函数来说，this会绑定到函数<strong>执行时</strong>的上下文，比如</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var o=&#123;</span><br><span class="line"> arr:[1,2,3]</span><br><span class="line"> loop:this.arr.forEach(function(v)&#123;</span><br><span class="line">	console.log(this.arr)  // undefined,这里this为window，浏览器里forEach中的函数执行时，context为window</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//所以如果想让this指向对象o，需要进行绑定</span><br><span class="line">var o=&#123;</span><br><span class="line"> arr:[1,2,3],</span><br><span class="line"> loop:this.arr.forEach(function(v)&#123;</span><br><span class="line">	console.log(this.arr)  // undefined,这里this为window，浏览器里forEach中的函数由window执行</span><br><span class="line">	&#125;.bind(this))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>而在ES6的箭头函数中，this不会绑定到执行时的上下文，箭头函数的this为词法绑定，就是绑定到函数定义时的上下文，即this来自于包含箭头函数的代码块中的定义</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var o=&#123;</span><br><span class="line"> arr:[1,2,3],</span><br><span class="line"> loop:this.arr.forEach((v)=&gt;&#123;</span><br><span class="line">	console.log(this.arr)  // 这里this就是o</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="二-适用-不适用场景"><a href="#二-适用-不适用场景" class="headerlink" title="二 适用/不适用场景"></a>二 适用/不适用场景</h3><h4 id="适用"><a href="#适用" class="headerlink" title="适用"></a>适用</h4><p>this固定为定义时的context，不随执行变化</p>
-<h4 id="不适用"><a href="#不适用" class="headerlink" title="不适用"></a>不适用</h4><p>1.直接用在对象方法上</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var o = &#123;</span><br><span class="line">  name: 9,</span><br><span class="line">  fn: () =&gt; &#123;</span><br><span class="line">   console.log(this.name) //undefined，此时this==window</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2.context随执行变化的场景</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var button = document.getElementById(&apos;press&apos;);</span><br><span class="line">button.addEventListener(&apos;click&apos;, () =&gt; &#123;</span><br><span class="line">  this.classList.toggle(&apos;on&apos;); // 这里this无法指向button元素，而是指向了window</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+        <p>android 中文字会向偏移，（如按钮文字，加了删除线的文字，偏移效果明显，iphone中正常居中）</p>
+<p>解决方案：将字体扩大一倍，然后用transform：scale(0.5)在缩小一倍<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.raw-price &#123;</span><br><span class="line">     font-size: 18px;  //目标size为9px， 这里放大一倍</span><br><span class="line">     transform: scale(.5); //在使用transform缩小</span><br><span class="line">     position: absolute; </span><br><span class="line">     left: -15px; //当使用了transform时，位置也会缩小，定位需要重写</span><br><span class="line">     top: 5px; </span><br><span class="line">     line-height: 12px; </span><br><span class="line">     color: rgb(120, 130, 149); </span><br><span class="line">     opacity: 0.47; text-decoration: line-through; &#125;</span><br></pre></td></tr></table></figure></p>
+<p>注意：需要调节位置，scale缩放后会导致错位</p>
+<p><a href="https://github.com/o2team/H5Skills/issues/4" target="_blank" rel="noopener">https://github.com/o2team/H5Skills/issues/4</a></p>
 
       
     </div>
@@ -334,8 +329,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/13/创建一个react组件并发布到npm/" rel="next" title="创建一个react组件并发布到npm">
-                <i class="fa fa-chevron-left"></i> 创建一个react组件并发布到npm
+              <a href="/2019/08/17/fork-远程库并更新/" rel="next" title="fork 远程库并更新">
+                <i class="fa fa-chevron-left"></i> fork 远程库并更新
               </a>
             
           </div>
@@ -343,10 +338,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/18/async-await/" rel="prev" title="async await">
-                async await <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -398,17 +389,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -457,22 +439,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-箭头函数中的this"><span class="nav-number">1.</span> <span class="nav-text">一 箭头函数中的this</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-适用-不适用场景"><span class="nav-number">2.</span> <span class="nav-text">二 适用/不适用场景</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#适用"><span class="nav-number">2.1.</span> <span class="nav-text">适用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不适用"><span class="nav-number">2.2.</span> <span class="nav-text">不适用</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
